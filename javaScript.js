@@ -36,7 +36,16 @@ const searchFoods = () => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`
     fetch(url)
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => displaySearchedFood(data.meals))
+}
+const displaySearchedFood = foods => {
+    const foodContainer = document.getElementById("search-food");
+
+    foods.forEach(foods => {
+        const li = document.createElement("li");
+        li.innerText = foods.strMeal;
+        foodContainer.appendChild(li);
+    })
 }
 
 // const searchInput = document.getElementById("search-input").value;
