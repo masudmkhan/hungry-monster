@@ -10,20 +10,23 @@ const displayFood = foods => {
         const foodInfo = `
         <img src="${eachFood.strMealThumb}">
        <h3 class="food-name">${eachFood.strMeal}</h3>
-       <button onclick = "displayFoodDetails('${eachFood.strMealThumb}')"> Click Here </button>
+       <button onclick = "displayFoodDetails('${eachFood.strMeal}')"> Click Here </button>
        `;
         foodDiv.innerHTML = foodInfo;
         foodsDiv.appendChild(foodDiv);
     });
 }
-const displayFoodDetails = name => {
-    console.log(name);
+const displayFoodDetails = recipe => {
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${recipe}`
+    fetch(url)
+    .then(res => res.json())
+    .then(data => renderFoodDetail(data.meals[0]));
 }
 
-const searchedFood = name => {
-    const searchInput = document.getElementById("search-input").value;
-
-    fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=" + searchInput)
-    .then(res => res.json())
-    .then(data => displayFood(data.meals));
+const renderFoodDetail = foodDetail =>{
+    const foodDiv = document.getElementById("food-detail");
+    foodDiv.innerHTML = `
+    <h1>${foodDetail.strMeal}</h1>
+    <p>${foodDetail.strInstructions}</p>
+    `;
 }
