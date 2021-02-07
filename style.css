@@ -1,0 +1,33 @@
+.food-items{
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgb(199, 199, 199);
+    padding-bottom: 20px;
+}
+.food-name{
+    font-size: 30px;
+    color: rgb(39, 30, 30);
+}
+#foods{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+body{
+    background-color: rgb(255, 214, 190)
+}
+.food-items img{
+    height: 150px;
+    width: 100%;
+    border-radius: 20px;
+}
+#input-div{
+    padding-left: 40%; 
+    padding-right: 40%; 
+    padding-bottom: 20px; 
+    padding-top: 20px;
+}
+#search-btn{
+    background-color: rgb(53, 0, 53); 
+    color: white;
+}
