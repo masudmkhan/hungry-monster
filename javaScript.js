@@ -30,3 +30,26 @@ const renderFoodDetail = foodDetail =>{
     <p>${foodDetail.strInstructions}</p>
     `;
 }
+
+const searchFoods = () => {
+    const searchText = document.getElementById("search-input").value;
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`
+    fetch(url)
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
+
+// const searchInput = document.getElementById("search-input").value;
+// const inputBtn = document.getElementById("search-btn").addEventListener("click", function searchedinput(){
+//         const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`
+//         fetch(url)
+//         .then(res => res.json())
+//         .then(data => foodSearch(data.meals[0]));
+    
+//     const foodSearch = searched =>{
+//         const searchFood = document.getElementById("search-food");
+//         searchFood.innerHTML =`
+        
+//         `
+//     }
+// })
