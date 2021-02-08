@@ -42,23 +42,14 @@ const displaySearchedFood = foods => {
     const foodContainer = document.getElementById("search-food");
 
     foods.forEach(foods => {
-        const li = document.createElement("li");
-        li.innerText = foods.strMeal;
-        foodContainer.appendChild(li);
+        const foodDiv = document.createElement("div");
+        foodDiv.className = "single-result row align-items-center my-3 p-3";
+        foodDiv.innerHTML = `
+        <div class="search-result">
+        <img src="${foods.strMealThumb}">
+        <h3 class = "foods-name"> ${foods.strMeal} </h3>
+        <button class = "btn btn-success">Get Food</button>
+        `
+        foodContainer.appendChild(foodDiv);
     })
 }
-
-// const searchInput = document.getElementById("search-input").value;
-// const inputBtn = document.getElementById("search-btn").addEventListener("click", function searchedinput(){
-//         const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`
-//         fetch(url)
-//         .then(res => res.json())
-//         .then(data => foodSearch(data.meals[0]));
-    
-//     const foodSearch = searched =>{
-//         const searchFood = document.getElementById("search-food");
-//         searchFood.innerHTML =`
-        
-//         `
-//     }
-// })

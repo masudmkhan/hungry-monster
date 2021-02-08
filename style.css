@@ -14,7 +14,7 @@
     grid-gap: 20px;
 }
 body{
-    background-color: rgb(255, 214, 190)
+    background-color: rgb(255, 214, 190);
 }
 .food-items img{
     height: 150px;
@@ -30,4 +30,12 @@ body{
 #search-btn{
     background-color: rgb(53, 0, 53); 
     color: white;
+}
+.search-result img{
+    width: 100%;
+    height: 150px;
+}
+.search-result{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
