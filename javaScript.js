@@ -8,9 +8,10 @@ const displayFood = foods => {
         const foodDiv = document.createElement("div");
         foodDiv.className = "food-items";
         const foodInfo = `
+        <div onclick = "displayFoodDetails('${eachFood.strMeal}')">
         <img src="${eachFood.strMealThumb}">
        <h3 class="food-name">${eachFood.strMeal}</h3>
-       <button onclick = "displayFoodDetails('${eachFood.strMeal}')"> Click Here </button>
+       </div>
        `;
         foodDiv.innerHTML = foodInfo;
         foodsDiv.appendChild(foodDiv);
@@ -43,12 +44,14 @@ const displaySearchedFood = foods => {
 
     foods.forEach(foods => {
         const foodDiv = document.createElement("div");
-        foodDiv.className = "single-result row align-items-center my-3 p-3";
+        foodDiv.className = "single-result row align-items-center my-3 p-3 search-result";
         foodDiv.innerHTML = `
-        <div class="search-result">
+        <div>
         <img src="${foods.strMealThumb}">
+        </div>
+        <div>
         <h3 class = "foods-name"> ${foods.strMeal} </h3>
-        <button class = "btn btn-success">Get Food</button>
+        </div>
         `
         foodContainer.appendChild(foodDiv);
     })
