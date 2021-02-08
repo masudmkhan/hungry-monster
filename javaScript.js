@@ -30,6 +30,9 @@ const renderFoodDetail = foodDetail =>{
     foodDiv.innerHTML = `
     <img src="${foodDetail.strMealThumb}">
     <h1>${foodDetail.strMeal}</h1>
+    <br>
+    <h3> Ingredients </h3>
+    <br>
     <p>${foodDetail.strMeasure1} ${foodDetail.strIngredient1}</p>
     <p>${foodDetail.strMeasure2} ${foodDetail.strIngredient2}</p>
     <p>${foodDetail.strMeasure3} ${foodDetail.strIngredient3}</p>
