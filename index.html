@@ -7,18 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hungry Monster</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    </head>
 
 <body>
+    <div>
+        <p class="upper-part"><b>Blog</b></p>
+        <p class="upper-part"><b>Recipes</b></p>
+        <p class="upper-part"><b>About</b></p>
+        <p class="upper-part"><b>Home</b></p>
+    </div>
     <div id="input-div">
         <input id="search-input" type="text" placeholder="Enter Your Recipe"> 
         <button onclick="searchFoods()" id="search-btn">Search</button>
     </div>
-    <div id="search-food">
+    
+    <div id="food-details">
 
     </div>
-    <div id="food-detail">
+
+    <div id="search-food">
 
     </div>
     <h1 class="food-menu">Food Menu</h1>
@@ -27,6 +35,7 @@
 
     </div>
     <script src="javaScript.js"></script>
+    <script src="bootstrap.min.js"></script>
 </body>
 
 </html>

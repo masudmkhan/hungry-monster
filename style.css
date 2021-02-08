@@ -13,9 +13,6 @@
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px;
 }
-body{
-    background-color: rgb(255, 202, 159);
-}
 .food-items img{
     height: 150px;
     width: 100%;
@@ -25,7 +22,7 @@ body{
     padding-left: 40%; 
     padding-right: 40%; 
     padding-bottom: 20px; 
-    padding-top: 20px;
+    padding-top: 40px;
 }
 #search-btn{
     background-color: rgb(53, 0, 53); 
@@ -44,6 +41,25 @@ body{
     text-align: center;
 }
 .food-menu{
-    color: indianred;
+    color: rgb(255, 136, 0);
     text-align: center;
+}
+#food-details img{
+    width: 200px;
+    height: 100px;
+}
+#food-details{
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+    border: 2px solid rgb(255, 75, 75);
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+}
+.upper-part{
+    float: right;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
